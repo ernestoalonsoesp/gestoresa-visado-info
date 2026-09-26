@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Solicitud de Visados de España en La Habana | Información y Asesoría</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              blue: '#1e3a8a',
+              accent: '#b91c1c',
+              gold: '#d97706',
+              light: '#f8fafc'
+            },
+            whatsapp: '#25D366',
+            whatsappDark: '#128C7E'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .faq-content {
+      transition: max-height 0.3s ease-out, opacity 0.25s ease-in-out;
+    }
+    .faq-collapsed {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-expanded {
+      max-height: 800px;
+      opacity: 1;
+    }
+    .pulse-soft {
+      animation: pulseGlow 2.5s infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4); }
+      50% { transform: scale(1.03); box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.65); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-amber-100 selection:text-amber-900 min-h-screen flex flex-col justify-between">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-3.5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-900 to-red-600 flex items-center justify-center text-white shadow-md">
+          <i class="ph-bold ph-passport text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 block">Guía Informativa</span>
+          <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Visados España <span class="text-red-700">| La Habana</span></h1>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/34604940914?text=Hola,%20tengo%20dudas%20sobre%20el%20nuevo%20Centro%20de%20Visados%20en%20La%20Habana" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2 rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow">
+          <i class="ph-bold ph-whatsapp-logo text-lg"></i>
+          <span class="hidden sm:inline">Hablar con Asesor</span>
+          <span class="sm:hidden">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="relative bg-gradient-to-b from-blue-950 via-slate-900 to-slate-900 text-white pt-12 pb-20 px-4 sm:px-6 overflow-hidden">
+      <!-- Background subtle pattern -->
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs sm:text-sm font-semibold mb-6">
+          <i class="ph-fill ph-bell-ringing"></i>
+          Actualización Oficial de Procedimientos 2026
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white mb-6">
+          Nuevo Centro de Solicitud de Visados de España en Cuba
+        </h2>
+        
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          Respuestas claras y orientación inmediata sobre la transición del sistema Bookitit al nuevo centro presencial en Miramar, La Habana.
+        </p>
+
+        <!-- Highlights Quick Bar -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left max-w-3xl mx-auto">
+          <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl">
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-1">
+              <i class="ph-bold ph-calendar-check text-base"></i> Inicio Gradual
+            </div>
+            <div class="text-white font-bold text-lg">5 de Octubre de 2026</div>
+            <p class="text-slate-300 text-xs mt-1">Apertura escalonada de atención de citas.</p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl">
+            <div class="flex items-center gap-2 text-rose-400 text-xs font-semibold uppercase tracking-wider mb-1">
+              <i class="ph-bold ph-prohibit text-base"></i> Cierre Bookitit
+            </div>
+            <div class="text-white font-bold text-lg">21 de Septiembre</div>
+            <p class="text-slate-300 text-xs mt-1">No se admiten nuevas solicitudes previas.</p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl">
+            <div class="flex items-center gap-2 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-1">
+              <i class="ph-bold ph-check-circle text-base"></i> Citas Vigentes
+            </div>
+            <div class="text-white font-bold text-lg">Se Mantienen</div>
+            <p class="text-slate-300 text-xs mt-1">Notificación directa vía correo electrónico.</p>
+          </div>
+        </div>
+
+        <!-- Direct WhatsApp Hero CTA -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/34604940914?text=Hola,%20necesito%20ayuda%20para%20gestionar%20mi%20tr%C3%A1mite%20de%20visado%20para%20Espa%C3%B1a" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-4 rounded-2xl text-base sm:text-lg transition-all transform hover:-translate-y-0.5 shadow-xl hover:shadow-emerald-500/25">
+            <i class="ph-bold ph-whatsapp-logo text-2xl text-slate-900"></i>
+            <span>Consultar por WhatsApp</span>
+          </a>
+          <a href="#preguntas-frecuentes" 
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-4 rounded-2xl text-base transition-colors">
+            <i class="ph-bold ph-list-magnifying-glass"></i>
+            <span>Ver Preguntas Frecuentes</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 -mt-10 relative z-20">
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Location Info -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+              <i class="ph-bold ph-map-pin"></i> Ubicación Oficial del Centro
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900">Centro de Solicitud de Visados en La Habana</h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              El nuevo espacio físico brindará servicio directo y recepción formal para agilizar los trámites consulares:
+            </p>
+
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl flex items-start justify-between gap-3">
+              <div class="flex items-start gap-3">
+                <div class="p-2.5 bg-blue-100 text-blue-800 rounded-xl mt-0.5">
+                  <i class="ph-fill ph-buildings text-xl"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-500 font-medium">Dirección Presencial</div>
+                  <div id="addressText" class="text-sm sm:text-base font-semibold text-slate-900">
+                    Avenida 31, entre 18 y 14, casa 1419, Miramar, Playa, La Habana
+                  </div>
+                </div>
+              </div>
+              <button onclick="copyAddress()" class="flex-shrink-0 text-xs font-semibold bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 px-3 py-2 rounded-xl transition flex items-center gap-1.5" title="Copiar dirección">
+                <i class="ph-bold ph-copy" id="copyIcon"></i>
+                <span id="copyFeedback">Copiar</span>
+              </button>
+            </div>
+
+            <!-- Crucial Authority Distinction Banner -->
+            <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-2xl text-xs sm:text-sm text-amber-900 leading-relaxed">
+              <span class="font-bold flex items-center gap-1.5 mb-1">
+                <i class="ph-bold ph-scales text-base"></i> ¿Quién aprueba o deniega su visado?
+              </span>
+              La decisión sobre la concesión o denegación sigue correspondiendo <strong>exclusivamente al Consulado General de España en La Habana</strong>. El Centro solo gestiona recepción, logística y entrega de expedientes.
+            </div>
+          </div>
+
+          <!-- Fast Contact Card -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-2xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between h-full shadow-inner">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  Línea de Asesoría Directa
+                </span>
+                <i class="ph-bold ph-whatsapp-logo text-3xl text-emerald-400"></i>
+              </div>
+              
+              <h4 class="text-xl font-bold leading-tight">¿Tienes dudas con tu cita o tu expediente?</h4>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Si no estás seguro de cómo afecta esta transición a tu expediente personal o deseas preparar tus documentos sin errores, contáctanos directamente.
+              </p>
+
+              <div class="bg-white/10 rounded-xl p-3 text-xs text-slate-200">
+                <div class="text-slate-400 text-[10px] uppercase">Número WhatsApp</div>
+                <div class="font-mono font-bold text-sm tracking-wide text-white">+34 604 94 09 14</div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/34604940914?text=Hola,%20necesito%20asesor%C3%ADa%20personalizada%20para%20mi%20visado%20de%20Espa%C3%B1a" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="mt-6 w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition duration-150 flex items-center justify-center gap-2 shadow-lg">
+              <i class="ph-bold ph-paper-plane-tilt"></i>
+              Escribir por WhatsApp Ahora
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas-frecuentes" class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold text-blue-700 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Preguntas Frecuentes</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Todo lo que debes saber</h2>
+        <p class="text-slate-500 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+          Encuentra respuesta inmediata a las dudas más comunes sobre la transición al nuevo centro consular en La Habana.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="mt-6 relative max-w-lg mx-auto">
+          <i class="ph-bold ph-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg"></i>
+          <input 
+            type="text" 
+            id="faqSearch" 
+            placeholder="Buscar por cita, correo, bookitit, resolución..." 
+            oninput="filterFaqs()"
+            class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-300 rounded-2xl text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition"
+          >
+          <button 
+            id="clearSearch" 
+            onclick="clearSearchInput()" 
+            class="hidden absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 font-semibold bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded-lg">
+            Limpiar
+          </button>
+        </div>
+      </div>
+
+      <!-- FAQ Accordions Container -->
+      <div class="space-y-4" id="faqContainer">
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm transition hover:border-slate-300 overflow-hidden" data-keywords="donde operará centro cuando fecha inicio 5 octubre direccion miramar playa ubicacion">
+          <button type="button" onclick="toggleFaq(1)" class="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 focus:outline-none">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1</span>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">¿Dónde y a partir de cuándo operará el nuevo centro?</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Fecha oficial de apertura y ubicación física</p>
+              </div>
+            </div>
+            <i class="ph-bold ph-caret-down text-slate-400 text-xl transition-transform duration-200 shrink-0" id="faq-icon-1"></i>
+          </button>
+          <div id="faq-content-1" class="faq-content faq-expanded px-5 sm:px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+            <div class="pt-4 space-y-3">
+              <div class="flex items-start gap-2.5">
+                <i class="ph-fill ph-calendar text-blue-700 text-lg mt-0.5 shrink-0"></i>
+                <div>
+                  <strong class="text-slate-900 block font-semibold">Fecha de inicio:</strong>
+                  Comenzará a atender citas de forma <strong>gradual y escalonada a partir del 5 de octubre de 2026</strong>.
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i class="ph-fill ph-map-pin text-red-600 text-lg mt-0.5 shrink-0"></i>
+                <div>
+                  <strong class="text-slate-900 block font-semibold">Dirección exacta:</strong>
+                  Avenida 31, entre 18 y 14, casa 1419, Miramar, Municipio Playa, La Habana.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm transition hover:border-slate-300 overflow-hidden" data-keywords="tramites servicios recepcion solicitudes documentacion entrega pasaporte resoluciones atención">
+          <button type="button" onclick="toggleFaq(2)" class="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 focus:outline-none">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2</span>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">¿Qué trámites específicos se realizarán en este centro?</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Alcance de los servicios de recepción y entrega</p>
+              </div>
+            </div>
+            <i class="ph-bold ph-caret-down text-slate-400 text-xl transition-transform duration-200 shrink-0" id="faq-icon-2"></i>
+          </button>
+          <div id="faq-content-2" class="faq-content faq-collapsed px-5 sm:px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+            <div class="pt-4 space-y-3">
+              <p>El Centro de Solicitud de Visados asume tres funciones operativas fundamentales:</p>
+              <ul class="space-y-2.5 pl-1">
+                <li class="flex items-start gap-2">
+                  <i class="ph-bold ph-check text-emerald-600 mt-1 shrink-0"></i>
+                  <span><strong>Recepción:</strong> Entrega física de formularios, expedientes y toda la documentación justificativa requerida para la solicitud del visado.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="ph-bold ph-check text-emerald-600 mt-1 shrink-0"></i>
+                  <span><strong>Atención al usuario:</strong> Asistencia presencial y orientación directa al público solicitante durante su cita.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="ph-bold ph-check text-emerald-600 mt-1 shrink-0"></i>
+                  <span><strong>Entrega final:</strong> Retiro personal del pasaporte y de la notificación oficial de la resolución una vez evaluado el expediente.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm transition hover:border-slate-300 overflow-hidden" data-keywords="quien decide aprobado denegado rechazo consulado general habana potestad autoridad">
+          <button type="button" onclick="toggleFaq(3)" class="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 focus:outline-none">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</span>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">¿Quién decide si el visado es aprobado o denegado?</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Diferencia entre el centro externo y la autoridad consular</p>
+              </div>
+            </div>
+            <i class="ph-bold ph-caret-down text-slate-400 text-xl transition-transform duration-200 shrink-0" id="faq-icon-3"></i>
+          </button>
+          <div id="faq-content-3" class="faq-content faq-collapsed px-5 sm:px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+            <div class="pt-4 space-y-3">
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-semibold text-slate-900 mb-1">
+                  Únicamente el Consulado General de España en La Habana.
+                </p>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  El Centro de Solicitud de Visados actúa <strong>única y exclusivamente como intermediario administrativo</strong> de soporte logístico (recepción y entrega). Ningún agente o personal del centro tiene la potestad de decidir, evaluar o influir en la concesión o denegación de visados.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm transition hover:border-slate-300 overflow-hidden" data-keywords="que ocurre bookitit sistema anterior citas nuevas solicitudes 21 de septiembre descontinuado">
+          <button type="button" onclick="toggleFaq(4)" class="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 focus:outline-none">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">4</span>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">¿Qué ocurre con el sistema Bookitit?</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Estado del anterior sistema en línea del Consulado</p>
+              </div>
+            </div>
+            <i class="ph-bold ph-caret-down text-slate-400 text-xl transition-transform duration-200 shrink-0" id="faq-icon-4"></i>
+          </button>
+          <div id="faq-content-4" class="faq-content faq-collapsed px-5 sm:px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+            <div class="pt-4 space-y-2">
+              <p>
+                A partir del <strong>21 de septiembre de 2026</strong>, dejaron de atenderse y admitirse nuevas solicitudes de cita a través de la plataforma Bookitit.
+              </p>
+              <p class="text-xs text-slate-500">
+                Dicho sistema queda descontinuado como canal de registro inicial para nuevos usuarios que busquen programar citas consulares.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm transition hover:border-slate-300 overflow-hidden" data-keywords="tenian cita credenciales antes 21 septiembre correo email info@spainvisa-cuba.com spam no deseado">
+          <button type="button" onclick="toggleFaq(5)" class="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 focus:outline-none">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">5</span>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">¿Qué pasa con quienes ya tenían cita o pidieron credenciales antes del 21 de septiembre?</h3>
+                <p class="text-xs text-slate-500 mt-1 font-medium">Instrucciones críticas para solicitudes en tránsito</p>
+              </div>
+            </div>
+            <i class="ph-bold ph-caret-down text-slate-400 text-xl transition-transform duration-200 shrink-0" id="faq-icon-5"></i>
+          </button>
+          <div id="faq-content-5" class="faq-content faq-collapsed px-5 sm:px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+            <div class="pt-4 space-y-4">
+              <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-emerald-900">
+                <span class="font-bold block text-sm mb-1">¡No tiene que comenzar el trámite de nuevo!</span>
+                Las personas que ya contaban con cita confirmada, que recibieron sus credenciales o que las habían solicitado antes del 21 de septiembre <strong>mantendrán su solicitud vigente</strong>.
+              </div>
+
+              <div class="space-y-2">
+                <div class="font-semibold text-slate-900 text-sm">¿Cómo serán contactados?</div>
+                <p class="text-xs text-slate-600">
+                  Serán notificados directamente por correo electrónico desde la cuenta oficial:
+                </p>
+                <div class="inline-block bg-slate-100 border border-slate-300 px-3 py-1.5 rounded-lg font-mono text-xs text-blue-900 font-bold select-all">
+                  info@spainvisa-cuba.com
+                </div>
+              </div>
+
+              <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-2.5 text-xs text-amber-900">
+                <i class="ph-fill ph-warning-circle text-amber-600 text-base mt-0.5 shrink-0"></i>
+                <div>
+                  <strong>Recomendación esencial:</strong> Revise periódicamente tanto la <em>bandeja de entrada</em> como la carpeta de <strong>"Correo no deseado" o "Spam"</strong> del correo que registró para las credenciales.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No search results state -->
+      <div id="noResults" class="hidden text-center py-12 bg-white rounded-2xl border border-dashed border-slate-300 mt-4">
+        <i class="ph-thin ph-magnifying-glass text-4xl text-slate-400 mb-2"></i>
+        <p class="text-slate-700 font-semibold text-base">No se encontraron respuestas para tu búsqueda</p>
+        <p class="text-slate-500 text-xs mt-1">Escríbenos directamente a WhatsApp y te asesoramos al instante.</p>
+        <button onclick="clearSearchInput()" class="mt-4 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition">
+          Ver todas las preguntas
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-slate-100/70 py-14 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-8">
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900">¿Qué debes revisar antes de tu cita?</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-1">Recomendaciones para evitar contratiempos o reprogramaciones</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center mb-3">
+              <i class="ph-bold ph-envelope-open text-xl"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Bandeja de Spam</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Configura como remitente seguro a <strong>info@spainvisa-cuba.com</strong> para asegurar que recibas las instrucciones.
+            </p>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="w-9 h-9 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center mb-3">
+              <i class="ph-bold ph-folder-notch-open text-xl"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Expediente Completo</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Lleva original y copia clara de toda tu documentación probatoria el día asignado en Miramar.
+            </p>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-3">
+              <i class="ph-bold ph-chat-circle-dots text-xl"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Asesoría Preventiva</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Resuelve tus dudas sobre requisitos, visados Shengen o de estancia con ayuda directa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+      <div class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+            Atención Inmediata
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            ¿Necesitas ayuda con tu trámite o expediente?
+          </h3>
+          <p class="text-emerald-100 text-sm sm:text-base max-w-xl">
+            Te orientamos de manera personalizada sobre requisitos, preparación de carpetas de visado y verificación de citas.
+          </p>
+        </div>
+
+        <a href="https://wa.me/34604940914?text=Hola,%20quisiera%20recibir%20orientaci%C3%B3n%20sobre%20mi%20tr%C3%A1mite%20de%20visado%20para%20Espa%C3%B1a" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="whitespace-nowrap inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-emerald-900 font-extrabold px-8 py-4 rounded-2xl text-base transition-all transform hover:scale-105 shadow-lg">
+          <i class="ph-bold ph-whatsapp-logo text-2xl text-emerald-600"></i>
+          <span>Contactar (+34 604940914)</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <aside class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/34604940914?text=Hola,%20deseo%20hacer%20una%20consulta%20sobre%20el%20Centro%20de%20Visados%20en%20La%20Habana" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="pulse-soft flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-5 rounded-full shadow-2xl transition duration-200 group"
+       title="Escríbenos por WhatsApp">
+      <i class="ph-bold ph-whatsapp-logo text-2xl"></i>
+      <span class="text-sm font-semibold pr-1">¿Dudas? Chatea aquí</span>
+    </a>
+  </aside>
+
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-6 text-center sm:text-left">
+        <div>
+          <span class="text-white font-bold text-sm block">Guía Informativa de Visados de España en Cuba</span>
+          <p class="text-slate-400 mt-1">Portal informativo de soporte y orientación ciudadana.</p>
+        </div>
+        <div>
+          <a href="https://wa.me/34604940914" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1.5">
+            <i class="ph-bold ph-whatsapp-logo"></i>
+            WhatsApp Directo: +34 604 94 09 14
+          </a>
+        </div>
+      </div>
+      
+      <div class="text-slate-500 leading-relaxed space-y-2">
+        <p>
+          <strong>Aviso Importante:</strong> Esta página tiene fines de divulgación y asesoría informativa independiente. La resolución y decisión sobre el otorgamiento o denegación de visados es competencia exclusiva del Consulado General de España en La Habana.
+        </p>
+        <p>
+          Remitente oficial de notificaciones del nuevo centro: <span class="text-slate-300 font-mono">info@spainvisa-cuba.com</span>.
+        </p>
+      </div>
+
+      <div class="text-center pt-2 text-slate-500">
+        &copy; 2026 Portal de Asistencia al Solicitante de Visados. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion Toggle
+    function toggleFaq(index) {
+      const content = document.getElementById(`faq-content-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      
+      const isExpanded = content.classList.contains('faq-expanded');
+
+      if (isExpanded) {
+        content.classList.remove('faq-expanded');
+        content.classList.add('faq-collapsed');
+        icon.classList.remove('rotate-180');
+      } else {
+        content.classList.remove('faq-collapsed');
+        content.classList.add('faq-expanded');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Filter FAQs by search query
+    function filterFaqs() {
+      const input = document.getElementById('faqSearch');
+      const filter = input.value.toLowerCase().trim();
+      const items = document.querySelectorAll('.faq-item');
+      const noResults = document.getElementById('noResults');
+      const clearBtn = document.getElementById('clearSearch');
+
+      if (filter.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      let visibleCount = 0;
+
+      items.forEach((item) => {
+        const text = item.innerText.toLowerCase();
+        const keywords = item.getAttribute('data-keywords') || '';
+        
+        if (text.includes(filter) || keywords.toLowerCase().includes(filter)) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    function clearSearchInput() {
+      const input = document.getElementById('faqSearch');
+      input.value = '';
+      filterFaqs();
+      input.focus();
+    }
+
+    // Copy address function with fallback for iframe restrictions
+    function copyAddress() {
+      const address = "Avenida 31, entre 18 y 14, casa 1419, Miramar, Playa, La Habana";
+      const feedback = document.getElementById('copyFeedback');
+      const icon = document.getElementById('copyIcon');
+
+      // Create dummy element for execCommand copy
+      const tempInput = document.createElement("textarea");
+      tempInput.value = address;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      
+      try {
+        document.execCommand("copy");
+        feedback.innerText = "¡Copiado!";
+        icon.className = "ph-bold ph-check text-emerald-600";
+        setTimeout(() => {
+          feedback.innerText = "Copiar";
+          icon.className = "ph-bold ph-copy";
+        }, 2200);
+      } catch (err) {
+        console.error('No se pudo copiar la dirección', err);
+      } finally {
+        document.body.removeChild(tempInput);
+      }
+    }
+  </script>
+</body>
+</html>
